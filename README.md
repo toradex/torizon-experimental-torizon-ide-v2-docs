@@ -140,22 +140,4 @@ To generate an image for production, ready to be deployed using the Torizon Plat
 
 If everything ran as expected, a `✅ docker-compose.prod.yml created` message will be displayed at the end. The `docker-compose.prod.yml` file can be used as input for a new `Upload Docker Compose Package` on [Torizon Platform](https://app.torizon.io/) update system.
 
-
-
 > ⚠️The first time the `create-production-image` is run it may take some time. This task has several automated steps, your application will be compiled for the selected architecture, a new docker image will be built for release production, the image will be push to the Docker registry and a `docker-compose.prod.yml` will be created on the root of the project workspace.
-
-
-
-### Using Torizon ApolloX Project on CI/CD Environment
-
-#### Prerequisites Dependencies
-
-The follow dependencies has to be installed on your CI/CD environment:
-
-- PowerShell Core
-
-- Docker
-
-- Docker Compose
-
-#### VS Code Tasks CLI script
