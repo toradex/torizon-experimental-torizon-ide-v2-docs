@@ -13,7 +13,7 @@ From feedback and past experience, we have redesigned the Torizon Extensions, fr
 - [Debian Torizon Packages](./DEBIAN-TORIZON-PACKAGES.md)
 - [Remote Deploying/Debugging Projects](./REMOTE-DEBUGGING.md)
 - [Generate Production Image](./GENERATING-PRODUCTION-IMAGES.md)
-- [Create Torizon IO Package](./PUSHING-PRODUCTION-IMAGES-TO-TORIZON-IO.md)
+- [Create Torizon Platform docker-compose Package](./PUSHING-PRODUCTION-IMAGES-TO-TORIZON-IO.md)
 - [Using Project Tasks in CLI](./USING-PROJECT-TASKS-IN-CLI.md)
 - [Github Actions Integration](./GITHUB-ACTIONS.md)
 - [GitLab CI Integration](./GITLAB-CI.md)
