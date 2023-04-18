@@ -2,7 +2,25 @@
 
 The Torizon VS Code Extension v2 (ApolloX) provides a set of workspace settings that can be configured to customize the behavior of the extension. These settings are available in the `settings.json` file in the `.vscode` folder of the workspace.
 
-## Torizon ApolloX properties
+## ApolloX properties
+
+### `apollox.telemetry`
+
+A boolean that enables or disables the telemetry collection. The telemetry is used to improve the extension and the templates. See [Data Collection](./USAGE-DATA.md) for more information.
+
+### `apollox.templatesBranch`
+
+A string that contains the branch to use for get the templates. For TorizonCore 5.0 projects set it to `bullseye`, for TorizonCore 6.0 project set it to `bookworm`. `bookworm` is the default value.
+
+### `apollox.experimental`
+
+A boolean that enables or disables the experimental features. The experimental features are not stable and can be changed or removed in the future.
+
+### `apollox.debianRelease`
+
+A string that contains the Debian release to use for torizon packages integration. See [Debian Torizon Packages](./DEBIAN-TORIZON-PACKAGES.md) for more information.
+
+## Torizon Project Properties
 
 ### `torizon_psswd`
 
