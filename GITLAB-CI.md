@@ -62,4 +62,20 @@ After configuring the variables needed, your GitLab repository is ready to run t
 
 The following jobs will be executed:
 
+- `Initial Setup`: This step will verify the environment variables and secrets configured in the repository. If any of the required variables are missing, the workflow will fail fast in this first step;
 
+- `build-docker-image`: This step will run the task `create-production-image` task. This task will create the production image and publish it to the Docker registry. See [Workspace Tasks](./WORKSPACE-TASKS.md#create-production-docker-image) for more information.
+
+- `push-package-to-platform`: This step will run the task `tcb-platform-publish`. This task will create the Torizon Platform package and publish it to the Torizon Platform. See [Workspace Tasks](./WORKSPACE-TASKS.md#tcb-platform-publish) for more information.
+
+- `update-fleet`: This step will run the task `platform-update-fleet`. This task will update the fleet with the new package. See [Workspace Tasks](./WORKSPACE-TASKS.md#platform-update-fleet) for more information.
+
+> ⚠️ The `update-fleet` job will only be executed in a `main` branch push. If you want to trigger a update when pushing in a different branch, you need to change the `if` condition in the `update-fleet` step from the `.gitlab-ci.yml` file. Check the templates repository file: <https://github.com/toradex/vscode-torizon-templates/blob/b35bb0ff7a0832f48a1731e2c13d7b106a00ab80/assets/gitlab/.gitlab-ci.yml#L101>
+
+At the end of the pipeline, if all occurs as expected, you will have the following in the pipeline page:
+
+![alt](./assets/img/gitlabPipelinePassed650.jpg)
+
+And the Torizon Platform updated will be triggered, you should have the devices from the fleet with `Update pending` state:
+
+![alt](./assets/img/torizonPlatformDevicingBeingUpdated.jpg)
