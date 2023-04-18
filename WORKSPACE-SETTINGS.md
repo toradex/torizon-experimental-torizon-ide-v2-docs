@@ -72,6 +72,10 @@ A string that contains the tag of the production container image. This property 
 
 As the value is not ask to the user in the next runs of the task, if you want to change the tag, you can manually set this property in the `settings.json` file.
 
+### `docker_login`
+
+It is set by the extension when the user is asked for the DockerHub login during the first run of the `Create Production Docker Image` task. This value will used also to set the Docker image name, `${docker_login}/${project_name}:${docker_tag}`.
+
 ### `docker_password`
 
 > ⚠️ This property was not designed to be set manually
@@ -89,3 +93,7 @@ A string that contains the name of the package that will be created in the Toriz
 ### `tcb.version`
 
 A string that contains the version of the TorizonCore builder to be used by the tasks. Check [TorizonCore Builder tags](https://hub.docker.com/r/torizon/torizoncore-builder/tags) for check the valid values.
+
+### `tcb.fleetName`
+
+A string that contains the name of the fleet that will be updated in the Torizon IO platform at the end of the CI/CD pipelines.
