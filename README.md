@@ -17,7 +17,7 @@ From feedback and past experience, we have redesigned the Torizon Extensions, fr
 - [Using Project Tasks in CLI](./USING-PROJECT-TASKS-IN-CLI.md)
 - [Github Actions Integration](./GITHUB-ACTIONS.md)
 - [GitLab CI Integration](./GITLAB-CI.md)
-- [Updating Project Tasks](./UPDATING-PROJECTS-BY-TEMPLATE.md)
+- [Updating Project from Template](./UPDATING-PROJECTS-BY-TEMPLATE.md)
 - [Creating a New Torizon Platform API v2 Client](./PLATFORM-API-V2-CLIENT.md)
 - [How to get Torizon Platform credentials.zip](./TORIZON-PLATFORM-CREDENTIALS.md)
 - [Enabling Experimental Features](./EXPERIMENTAL-FEATURES.md)
@@ -26,8 +26,8 @@ From feedback and past experience, we have redesigned the Torizon Extensions, fr
 
 ## Known Issues
 
-- [v1.0.0](./KNOWN-ISSUES.md#v100)
+- [v2.0.0](./KNOWN-ISSUES.md#v200)
 
 ## Release Notes
 
-- [v1.0.0](./RELEASE-NOTES-v100.md)
+- [v2.0.0](./RELEASE-NOTES-v200.md)

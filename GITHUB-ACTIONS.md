@@ -50,15 +50,15 @@ Do it for all the secrets listed below:
 
 - `PLATFORM_CLIENT_SECRET`: Torizon Platform API v2 Client Secret. See [Creating a New Torizon Platform API v2 Client](./PLATFORM-API-V2-CLIENT.md) for more information.
 
-- `PLATFORM_CREDENTIALS`: Torizon Platform credentials.zip file. See [How to get Torizon Platform credentials.zip](./TORIZON-PLATFORM-CREDENTIALS.md) for more information.
+### Adding credentials.zip as CI/CD Variable
 
-> ⚠️ The `PLATFORM_CREDENDIALS` secret must be a base64 encode of the `credentials.zip` file. To do that, run the following command in the root of the project:
->
-> ```bash
-> base64 -w 0 ./credentials.zip
-> ```
->
-> Then, copy the output and paste it in the `Secret*` field from `New secret` section. The GitHub Actions pipeline integrated in the project is already expecting a base64 encoded string, and will first decode it before use it.
+To use the TorizonCore Builder to create the Torizon Platform package, we need the `credentials.zip` file available in the CI/CD pipeline. The `.github/workflows/build-application.yaml` expectes to have the `PLATFORM_CREDENDIALS` secret with the base64 encode of the `credentials.zip` file. Execute the follow command to get the base64 encode of the `credentials.zip` file:
+
+```bash
+base64 -w 0 ./credentials.zip
+```
+
+Then, copy the output and paste it in the `Secret*` field from `New secret` section.
 
 ## Running the Github Actions Workflow
 

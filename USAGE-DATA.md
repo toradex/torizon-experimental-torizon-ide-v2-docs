@@ -1,6 +1,6 @@
 # Data Collection
 
-Torizon VS Code Extension v2 (ApolloX) has opt-in telemetry collection. Only *anonymous data* is being collected.
+Torizon VS Code Extension v2 (ApolloX) has opt-out telemetry collection. Only *anonymous data* is being collected.
 
 ## What's Included in the ApolloX Telemetry Data
 
@@ -21,10 +21,10 @@ Use the `apollox.telemetry` setting to enable or disable the telemetry collectio
 
 Use the command pallet and chose:
 
-![](https://docs1.toradex.com/112193-6aed58946967db95a844f67e1a85e758b715064f.png?v=1)
+![alt](https://docs1.toradex.com/112193-6aed58946967db95a844f67e1a85e758b715064f.png?v=1)
 
 Then add to the properties:
 
-```
+```json
     "apollox.telemetry": false,
 ```
